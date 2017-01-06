@@ -41,6 +41,8 @@ class Log
         $res = \File::delete($this->_logPath . $this->_logName);
         if ($res) {
             return redirect(config("tool.prefix") . '/log')->withCookie("message", "删除成功");
+        } else {
+            return redirect(config("tool.prefix") . '/log')->withCookie("error", "删除失败");
         };
     }
 
