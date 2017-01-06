@@ -27,15 +27,15 @@ class ToolServiceProvider extends ServiceProvider
     {
         //config
         $this->mergeConfigFrom(
-            // __DIR__ . '/../../config/project.php', 'project'
+            __DIR__ . '/../../config/tool.php', 'tool'
         );
 
         //扩展路由
         if (!$this->app->routesAreCached()) {
-            // require __DIR__ . '/../Routing/routes.php';
+            require __DIR__ . '/../Routing/routes.php';
         }
         //视图
-       // $this->loadViewsFrom(__DIR__ . '/../../views', 'views');
+        $this->loadViewsFrom(__DIR__ . '/../../view', 'views');
     }
 
 
@@ -47,7 +47,7 @@ class ToolServiceProvider extends ServiceProvider
     {
         //config--配置文件
         $this->publishes([
-            // __DIR__ . '/../../config/project.php' => config_path('Tool.php'),
+            __DIR__ . '/../../config/tool.php' => config_path('tool.php'),
         ]);
         //routes--路由文件
 
