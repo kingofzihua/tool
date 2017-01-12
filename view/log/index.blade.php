@@ -31,7 +31,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        {{$data}}
+                        <pre>{{$data}}</pre>
                     </div>
                 </div>
 
